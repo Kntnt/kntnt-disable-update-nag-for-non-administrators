@@ -2,7 +2,7 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:
+ * Plugin Name:       Kntnt Disable Update Nag for Non-Administrators
  * Plugin URI:        https://www.kntnt.com/
  * Description:       Disables update nags for non-administrators.
  * Version:           1.0.0
