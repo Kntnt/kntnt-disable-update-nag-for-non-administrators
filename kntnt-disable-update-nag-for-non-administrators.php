@@ -2,10 +2,10 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       Kntnt Disable Update Nag for Non-Administrators
+ * Plugin Name:
  * Plugin URI:        https://www.kntnt.com/
  * Description:       Disables update nags for non-administrators.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Thomas Barregren
  * Author URI:        https://www.kntnt.com/
  * License:           GPL-3.0+
@@ -23,7 +23,7 @@ final class Plugin {
     }
 
     public function run() {
-        if ( ! array_intersect( wp_get_current_user()->role, $allowed_roles ) ) {
+        if ( ! array_intersect( wp_get_current_user()->roles, $this->allowed_roles ) ) {
             add_filter( 'pre_site_transient_update_core', [ $this, 'dont_nag' ] );
             add_filter( 'pre_site_transient_update_plugins', [ $this, 'dont_nag' ] );
             add_filter( 'pre_site_transient_update_themes', [ $this, 'dont_nag' ] );
