@@ -5,14 +5,19 @@
  * Plugin Name:
  * Plugin URI:        https://www.kntnt.com/
  * Description:       Disables update nags for non-administrators.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Thomas Barregren
  * Author URI:        https://www.kntnt.com/
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
+
+namespace Kntnt\Disable_Nag_For_Non_Administrators;
+
+
 defined( 'ABSPATH' ) && new Plugin;
+
 
 final class Plugin {
 
